@@ -31,9 +31,9 @@ namespace Gestion_de_projet.Forms
             if(!String.IsNullOrWhiteSpace(Project.nom))
             {
                 RTC_Desc.Text = Project.description;
-                DTP_DateDeb.Value = Project.dateDeb;
-                DTP_DateFin.Value = Project.dateFin;
-                TBX_Nom.Text = Project.nom;
+                DTP_DateStart.Value = Project.dateDeb;
+                DTP_DateEnd.Value = Project.dateFin;
+                TBX_Name.Text = Project.nom;
             }
 
         }
@@ -62,15 +62,15 @@ namespace Gestion_de_projet.Forms
             DateTime datemin = new DateTime(1900, 1, 1);
             DateTime datemax = new DateTime(2100, 1, 1);
 
-            if (!String.IsNullOrWhiteSpace(TBX_Nom.Text))
+            if (!String.IsNullOrWhiteSpace(TBX_Name.Text) && !String.IsNullOrWhiteSpace(DTP_DateStart.ToString()))
             {
-                if (DateTime.Compare(DTP_DateDeb.Value, datemin) > 0 && DateTime.Compare(DTP_DateDeb.Value, datemax) < 0 && DateTime.Compare(DTP_DateFin.Value, datemin) > 0 && DateTime.Compare(DTP_DateFin.Value, datemax) < 0)
+                if (DateTime.Compare(DTP_DateStart.Value, datemin) > 0 && DateTime.Compare(DTP_DateStart.Value, datemax) < 0 && DateTime.Compare(DTP_DateEnd.Value, datemin) > 0 && DateTime.Compare(DTP_DateEnd.Value, datemax) < 0)
                 {
-                    if (DateTime.Compare(DTP_DateDeb.Value, DTP_DateFin.Value) <0)
+                    if (DateTime.Compare(DTP_DateStart.Value, DTP_DateEnd.Value) < 0 || (DTP_DateStart.Value.Day == DTP_DateEnd.Value.Day && DTP_DateStart.Value.Month == DTP_DateEnd.Value.Month && DTP_DateStart.Value.Year == DTP_DateStart.Value.Year))
                     {
-                    _Project.nom = TBX_Nom.Text;
-                    _Project.dateDeb = DTP_DateDeb.Value;
-                    _Project.dateFin = DTP_DateFin.Value;
+                    _Project.nom = TBX_Name.Text;
+                    _Project.dateDeb = DTP_DateStart.Value;
+                    _Project.dateFin = DTP_DateEnd.Value;
                     _Project.description = RTC_Desc.Text;
                     this.DialogResult = DialogResult.OK;
                     }

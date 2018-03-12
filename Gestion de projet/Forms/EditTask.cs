@@ -31,7 +31,7 @@ namespace Gestion_de_projet.Forms
             {
                 TBX_Title.Text = Task.Title;
                 TBX_Percent.Text = Convert.ToString(Task.PercentProg);
-                DTP_DateDeb.Value = Task.DateDeb;
+                DTP_DateStart.Value = Task.DateDeb;
                 DTP_DateEnd.Value = Task.DateEnd;
                 RTB_Desc.Text = Task.Desc;
                 CBX_Project.SelectedItem = Task.Project;
@@ -57,12 +57,12 @@ namespace Gestion_de_projet.Forms
 
             if (!String.IsNullOrWhiteSpace(TBX_Title.Text))
             {
-                if (DateTime.Compare(DTP_DateDeb.Value, datemin) > 0 && DateTime.Compare(DTP_DateDeb.Value, datemax) < 0 && DateTime.Compare(DTP_DateEnd.Value, datemin) > 0 && DateTime.Compare(DTP_DateEnd.Value, datemax) < 0)
+                if (DateTime.Compare(DTP_DateStart.Value, datemin) > 0 && DateTime.Compare(DTP_DateStart.Value, datemax) < 0 && DateTime.Compare(DTP_DateEnd.Value, datemin) > 0 && DateTime.Compare(DTP_DateEnd.Value, datemax) < 0)
                 {
-                    if (DateTime.Compare(DTP_DateDeb.Value, DTP_DateEnd.Value) < 0)
+                    if (DateTime.Compare(DTP_DateStart.Value, DTP_DateEnd.Value) < 0 || (DTP_DateStart.Value.Day == DTP_DateEnd.Value.Day && DTP_DateStart.Value.Month == DTP_DateEnd.Value.Month && DTP_DateStart.Value.Year == DTP_DateStart.Value.Year))
                     {
                         _Task.Title = TBX_Title.Text;
-                        _Task.DateDeb = DTP_DateDeb.Value;
+                        _Task.DateDeb = DTP_DateStart.Value;
                         _Task.DateEnd = DTP_DateEnd.Value;
                         _Task.Desc = RTB_Desc.Text;
                         if (!String.IsNullOrWhiteSpace(TBX_Percent.Text))

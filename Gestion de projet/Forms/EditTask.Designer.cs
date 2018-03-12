@@ -43,7 +43,7 @@
             this.RTB_Desc = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DTP_DateEnd = new System.Windows.Forms.DateTimePicker();
-            this.DTP_DateDeb = new System.Windows.Forms.DateTimePicker();
+            this.DTP_DateStart = new System.Windows.Forms.DateTimePicker();
             this.TBX_Title = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             // 
             this.CBX_TaskType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CBX_TaskType.FormattingEnabled = true;
-            this.CBX_TaskType.Location = new System.Drawing.Point(248, 413);
+            this.CBX_TaskType.Location = new System.Drawing.Point(170, 383);
             this.CBX_TaskType.Name = "CBX_TaskType";
             this.CBX_TaskType.Size = new System.Drawing.Size(244, 21);
             this.CBX_TaskType.TabIndex = 0;
@@ -72,7 +72,7 @@
             // 
             this.CBX_Project.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CBX_Project.FormattingEnabled = true;
-            this.CBX_Project.Location = new System.Drawing.Point(248, 298);
+            this.CBX_Project.Location = new System.Drawing.Point(170, 268);
             this.CBX_Project.Name = "CBX_Project";
             this.CBX_Project.Size = new System.Drawing.Size(244, 21);
             this.CBX_Project.TabIndex = 1;
@@ -81,7 +81,7 @@
             // BTN_OK
             // 
             this.BTN_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_OK.Location = new System.Drawing.Point(412, 65);
+            this.BTN_OK.Location = new System.Drawing.Point(255, 18);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
             this.BTN_OK.TabIndex = 2;
@@ -92,7 +92,7 @@
             // RTB_DescTaskType
             // 
             this.RTB_DescTaskType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RTB_DescTaskType.Location = new System.Drawing.Point(248, 443);
+            this.RTB_DescTaskType.Location = new System.Drawing.Point(170, 413);
             this.RTB_DescTaskType.Name = "RTB_DescTaskType";
             this.RTB_DescTaskType.ReadOnly = true;
             this.RTB_DescTaskType.Size = new System.Drawing.Size(244, 69);
@@ -102,7 +102,7 @@
             // RTB_DescProject
             // 
             this.RTB_DescProject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RTB_DescProject.Location = new System.Drawing.Point(248, 328);
+            this.RTB_DescProject.Location = new System.Drawing.Point(170, 298);
             this.RTB_DescProject.Name = "RTB_DescProject";
             this.RTB_DescProject.ReadOnly = true;
             this.RTB_DescProject.Size = new System.Drawing.Size(244, 69);
@@ -114,15 +114,15 @@
             this.panel1.Controls.Add(this.BTN_Cancel);
             this.panel1.Controls.Add(this.BTN_OK);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 527);
+            this.panel1.Location = new System.Drawing.Point(0, 494);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 100);
+            this.panel1.Size = new System.Drawing.Size(433, 53);
             this.panel1.TabIndex = 5;
             // 
             // BTN_Cancel
             // 
             this.BTN_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Cancel.Location = new System.Drawing.Point(493, 65);
+            this.BTN_Cancel.Location = new System.Drawing.Point(336, 18);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
             this.BTN_Cancel.TabIndex = 3;
@@ -148,7 +148,7 @@
             this.tableLayoutPanel1.Controls.Add(this.RTB_Desc, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.DTP_DateEnd, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.DTP_DateDeb, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.DTP_DateStart, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.TBX_Title, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 3);
@@ -159,7 +159,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 17;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -176,13 +176,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(590, 527);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(433, 494);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(97, 295);
+            this.label1.Location = new System.Drawing.Point(19, 265);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 30);
             this.label1.TabIndex = 0;
@@ -192,7 +192,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(97, 325);
+            this.label2.Location = new System.Drawing.Point(19, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 75);
             this.label2.TabIndex = 5;
@@ -202,7 +202,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(97, 410);
+            this.label3.Location = new System.Drawing.Point(19, 380);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 30);
             this.label3.TabIndex = 6;
@@ -212,7 +212,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(97, 440);
+            this.label4.Location = new System.Drawing.Point(19, 410);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 75);
             this.label4.TabIndex = 7;
@@ -221,7 +221,7 @@
             // RTB_Desc
             // 
             this.RTB_Desc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RTB_Desc.Location = new System.Drawing.Point(248, 213);
+            this.RTB_Desc.Location = new System.Drawing.Point(170, 183);
             this.RTB_Desc.Name = "RTB_Desc";
             this.RTB_Desc.Size = new System.Drawing.Size(244, 69);
             this.RTB_Desc.TabIndex = 8;
@@ -231,7 +231,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(97, 210);
+            this.label5.Location = new System.Drawing.Point(19, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 75);
             this.label5.TabIndex = 9;
@@ -240,23 +240,23 @@
             // DTP_DateEnd
             // 
             this.DTP_DateEnd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DTP_DateEnd.Location = new System.Drawing.Point(248, 133);
+            this.DTP_DateEnd.Location = new System.Drawing.Point(170, 103);
             this.DTP_DateEnd.Name = "DTP_DateEnd";
             this.DTP_DateEnd.Size = new System.Drawing.Size(244, 20);
             this.DTP_DateEnd.TabIndex = 11;
             // 
-            // DTP_DateDeb
+            // DTP_DateStart
             // 
-            this.DTP_DateDeb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DTP_DateDeb.Location = new System.Drawing.Point(248, 93);
-            this.DTP_DateDeb.Name = "DTP_DateDeb";
-            this.DTP_DateDeb.Size = new System.Drawing.Size(244, 20);
-            this.DTP_DateDeb.TabIndex = 12;
+            this.DTP_DateStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DTP_DateStart.Location = new System.Drawing.Point(170, 63);
+            this.DTP_DateStart.Name = "DTP_DateStart";
+            this.DTP_DateStart.Size = new System.Drawing.Size(244, 20);
+            this.DTP_DateStart.TabIndex = 12;
             // 
             // TBX_Title
             // 
             this.TBX_Title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TBX_Title.Location = new System.Drawing.Point(248, 53);
+            this.TBX_Title.Location = new System.Drawing.Point(170, 23);
             this.TBX_Title.Name = "TBX_Title";
             this.TBX_Title.Size = new System.Drawing.Size(244, 20);
             this.TBX_Title.TabIndex = 13;
@@ -265,7 +265,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(97, 50);
+            this.label6.Location = new System.Drawing.Point(19, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 30);
             this.label6.TabIndex = 14;
@@ -275,7 +275,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(97, 90);
+            this.label7.Location = new System.Drawing.Point(19, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 30);
             this.label7.TabIndex = 15;
@@ -285,7 +285,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(97, 130);
+            this.label8.Location = new System.Drawing.Point(19, 100);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(145, 30);
             this.label8.TabIndex = 16;
@@ -295,7 +295,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(97, 170);
+            this.label9.Location = new System.Drawing.Point(19, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 30);
             this.label9.TabIndex = 17;
@@ -306,12 +306,12 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.63934F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.36065F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel2.Controls.Add(this.PGB_Percent, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.TBX_Percent, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(248, 173);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(170, 143);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -323,14 +323,14 @@
             this.PGB_Percent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PGB_Percent.Location = new System.Drawing.Point(3, 3);
             this.PGB_Percent.Name = "PGB_Percent";
-            this.PGB_Percent.Size = new System.Drawing.Size(158, 18);
+            this.PGB_Percent.Size = new System.Drawing.Size(156, 18);
             this.PGB_Percent.TabIndex = 11;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.Location = new System.Drawing.Point(216, 0);
+            this.label10.Location = new System.Drawing.Point(214, 0);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.label10.Size = new System.Drawing.Size(20, 19);
@@ -340,7 +340,7 @@
             // 
             // TBX_Percent
             // 
-            this.TBX_Percent.Location = new System.Drawing.Point(167, 3);
+            this.TBX_Percent.Location = new System.Drawing.Point(165, 3);
             this.TBX_Percent.Name = "TBX_Percent";
             this.TBX_Percent.Size = new System.Drawing.Size(43, 20);
             this.TBX_Percent.TabIndex = 13;
@@ -351,12 +351,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 627);
+            this.ClientSize = new System.Drawing.Size(433, 547);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(606, 666);
-            this.MinimumSize = new System.Drawing.Size(606, 666);
             this.Name = "EditTask";
             this.Text = "EditTask";
             this.panel1.ResumeLayout(false);
@@ -385,7 +384,7 @@
         private System.Windows.Forms.RichTextBox RTB_Desc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker DTP_DateEnd;
-        private System.Windows.Forms.DateTimePicker DTP_DateDeb;
+        private System.Windows.Forms.DateTimePicker DTP_DateStart;
         private System.Windows.Forms.TextBox TBX_Title;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

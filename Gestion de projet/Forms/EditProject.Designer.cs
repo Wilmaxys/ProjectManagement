@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.RTC_Desc = new System.Windows.Forms.RichTextBox();
-            this.DTP_DateFin = new System.Windows.Forms.DateTimePicker();
-            this.DTP_DateDeb = new System.Windows.Forms.DateTimePicker();
-            this.TBX_Nom = new System.Windows.Forms.TextBox();
+            this.DTP_DateEnd = new System.Windows.Forms.DateTimePicker();
+            this.DTP_DateStart = new System.Windows.Forms.DateTimePicker();
+            this.TBX_Name = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_OK = new System.Windows.Forms.Button();
@@ -56,9 +56,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.RTC_Desc, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.DTP_DateFin, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.DTP_DateDeb, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.TBX_Nom, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.DTP_DateEnd, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.DTP_DateStart, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TBX_Name, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -124,29 +124,29 @@
             this.RTC_Desc.TabIndex = 6;
             this.RTC_Desc.Text = "";
             // 
-            // DTP_DateFin
+            // DTP_DateEnd
             // 
-            this.DTP_DateFin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DTP_DateFin.Location = new System.Drawing.Point(115, 53);
-            this.DTP_DateFin.Name = "DTP_DateFin";
-            this.DTP_DateFin.Size = new System.Drawing.Size(194, 20);
-            this.DTP_DateFin.TabIndex = 7;
+            this.DTP_DateEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DTP_DateEnd.Location = new System.Drawing.Point(115, 53);
+            this.DTP_DateEnd.Name = "DTP_DateEnd";
+            this.DTP_DateEnd.Size = new System.Drawing.Size(194, 20);
+            this.DTP_DateEnd.TabIndex = 7;
             // 
-            // DTP_DateDeb
+            // DTP_DateStart
             // 
-            this.DTP_DateDeb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DTP_DateDeb.Location = new System.Drawing.Point(115, 28);
-            this.DTP_DateDeb.Name = "DTP_DateDeb";
-            this.DTP_DateDeb.Size = new System.Drawing.Size(194, 20);
-            this.DTP_DateDeb.TabIndex = 8;
+            this.DTP_DateStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DTP_DateStart.Location = new System.Drawing.Point(115, 28);
+            this.DTP_DateStart.Name = "DTP_DateStart";
+            this.DTP_DateStart.Size = new System.Drawing.Size(194, 20);
+            this.DTP_DateStart.TabIndex = 8;
             // 
-            // TBX_Nom
+            // TBX_Name
             // 
-            this.TBX_Nom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TBX_Nom.Location = new System.Drawing.Point(115, 3);
-            this.TBX_Nom.Name = "TBX_Nom";
-            this.TBX_Nom.Size = new System.Drawing.Size(194, 20);
-            this.TBX_Nom.TabIndex = 9;
+            this.TBX_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TBX_Name.Location = new System.Drawing.Point(115, 3);
+            this.TBX_Name.Name = "TBX_Name";
+            this.TBX_Name.Size = new System.Drawing.Size(194, 20);
+            this.TBX_Name.TabIndex = 9;
             // 
             // panel1
             // 
@@ -207,9 +207,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox RTC_Desc;
-        private System.Windows.Forms.DateTimePicker DTP_DateFin;
-        private System.Windows.Forms.DateTimePicker DTP_DateDeb;
-        private System.Windows.Forms.TextBox TBX_Nom;
+        private System.Windows.Forms.DateTimePicker DTP_DateEnd;
+        private System.Windows.Forms.DateTimePicker DTP_DateStart;
+        private System.Windows.Forms.TextBox TBX_Name;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Button BTN_OK;
