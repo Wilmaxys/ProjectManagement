@@ -306,7 +306,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.63934F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.36065F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel2.Controls.Add(this.PGB_Percent, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.TBX_Percent, 1, 0);
@@ -323,14 +323,14 @@
             this.PGB_Percent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PGB_Percent.Location = new System.Drawing.Point(3, 3);
             this.PGB_Percent.Name = "PGB_Percent";
-            this.PGB_Percent.Size = new System.Drawing.Size(156, 18);
+            this.PGB_Percent.Size = new System.Drawing.Size(155, 18);
             this.PGB_Percent.TabIndex = 11;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.Location = new System.Drawing.Point(214, 0);
+            this.label10.Location = new System.Drawing.Point(213, 0);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.label10.Size = new System.Drawing.Size(20, 19);
@@ -340,7 +340,7 @@
             // 
             // TBX_Percent
             // 
-            this.TBX_Percent.Location = new System.Drawing.Point(165, 3);
+            this.TBX_Percent.Location = new System.Drawing.Point(164, 3);
             this.TBX_Percent.Name = "TBX_Percent";
             this.TBX_Percent.Size = new System.Drawing.Size(43, 20);
             this.TBX_Percent.TabIndex = 13;

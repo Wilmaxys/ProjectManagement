@@ -68,11 +68,11 @@ namespace Gestion_de_projet.Data
         {
             projectManagement result = new projectManagement();
 
-            if (File.Exists(".\\Data.dat"))
+            if (File.Exists(filePath))
             {
                 BinaryFormatter bf = new BinaryFormatter();
 
-                using(FileStream fileStream = new FileStream(".\\Data.dat", FileMode.Open, FileAccess.ReadWrite))
+                using(FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite))
                 {
                     result = bf.Deserialize(fileStream) as projectManagement;
                 }

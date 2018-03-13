@@ -28,12 +28,12 @@ namespace Gestion_de_projet.Forms
 
             this._Project = Project;
 
-            if(!String.IsNullOrWhiteSpace(Project.nom))
+            if(!String.IsNullOrWhiteSpace(Project.name))
             {
                 RTC_Desc.Text = Project.description;
                 DTP_DateStart.Value = Project.dateDeb;
                 DTP_DateEnd.Value = Project.dateFin;
-                TBX_Name.Text = Project.nom;
+                TBX_Name.Text = Project.name;
             }
 
         }
@@ -68,7 +68,7 @@ namespace Gestion_de_projet.Forms
                 {
                     if (DateTime.Compare(DTP_DateStart.Value, DTP_DateEnd.Value) < 0 || (DTP_DateStart.Value.Day == DTP_DateEnd.Value.Day && DTP_DateStart.Value.Month == DTP_DateEnd.Value.Month && DTP_DateStart.Value.Year == DTP_DateStart.Value.Year))
                     {
-                    _Project.nom = TBX_Name.Text;
+                    _Project.name = TBX_Name.Text;
                     _Project.dateDeb = DTP_DateStart.Value;
                     _Project.dateFin = DTP_DateEnd.Value;
                     _Project.description = RTC_Desc.Text;
@@ -85,7 +85,7 @@ namespace Gestion_de_projet.Forms
                 }
             }
             else
-                MessageBox.Show("La projet doit avoir un nom", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La projet doit avoir un name", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 

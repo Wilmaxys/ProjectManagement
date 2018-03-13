@@ -31,7 +31,7 @@ namespace Gestion_de_projet.Forms
             {
                 TBX_Title.Text = Task.Title;
                 TBX_Percent.Text = Convert.ToString(Task.PercentProg);
-                DTP_DateStart.Value = Task.DateDeb;
+                DTP_DateStart.Value = Task.DateStart;
                 DTP_DateEnd.Value = Task.DateEnd;
                 RTB_Desc.Text = Task.Desc;
                 CBX_Project.SelectedItem = Task.Project;
@@ -62,7 +62,7 @@ namespace Gestion_de_projet.Forms
                     if (DateTime.Compare(DTP_DateStart.Value, DTP_DateEnd.Value) < 0 || (DTP_DateStart.Value.Day == DTP_DateEnd.Value.Day && DTP_DateStart.Value.Month == DTP_DateEnd.Value.Month && DTP_DateStart.Value.Year == DTP_DateStart.Value.Year))
                     {
                         _Task.Title = TBX_Title.Text;
-                        _Task.DateDeb = DTP_DateStart.Value;
+                        _Task.DateStart = DTP_DateStart.Value;
                         _Task.DateEnd = DTP_DateEnd.Value;
                         _Task.Desc = RTB_Desc.Text;
                         if (!String.IsNullOrWhiteSpace(TBX_Percent.Text))
@@ -100,7 +100,7 @@ namespace Gestion_de_projet.Forms
         private void setDataSource(BindingList<project> listProject, BindingList<taskType> listTaskType)
         {
             CBX_Project.DataSource = listProject;
-            CBX_Project.DisplayMember = "nom";
+            CBX_Project.DisplayMember = "name";
 
             CBX_TaskType.DataSource = listTaskType;
             CBX_TaskType.DisplayMember = "label";
@@ -140,6 +140,11 @@ namespace Gestion_de_projet.Forms
             this.Close();
         }
 
+        /// <summary>
+        /// Charge la barre et vérifie la valeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TBX_Percent_TextChanged(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(TBX_Percent.Text))

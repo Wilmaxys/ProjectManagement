@@ -14,7 +14,7 @@ namespace Gestion_de_projet.Data
 
         private int identifier;
         private string title;
-        private DateTime dateDeb;
+        private DateTime dateStart;
         private DateTime dateEnd;
         private int percentProg;
         private string desc;
@@ -26,6 +26,7 @@ namespace Gestion_de_projet.Data
 
         [NonSerialized]
         private taskType taskType;
+
         private int identifierTaskType;
 
         #endregion
@@ -43,7 +44,7 @@ namespace Gestion_de_projet.Data
         /// <summary>
         /// Obtient ou modifit la date de début
         /// </summary>
-        public DateTime DateDeb { get => dateDeb; set => dateDeb = value; }
+        public DateTime DateStart { get => dateStart; set => dateStart = value; }
         /// <summary>
         /// Obtient ou modifit la date de fin
         /// </summary>
@@ -81,7 +82,7 @@ namespace Gestion_de_projet.Data
         /// </summary>
         public override string ToString()
         {
-            return Identifier + "," + Title + "," + DateDeb + "," + DateEnd + "," + PercentProg + "," + Desc + "," + Project + "," + TaskType;
+            return Identifier + "," + Title + "," + DateStart + "," + DateEnd + "," + PercentProg + "," + Desc + "," + Project + "," + TaskType;
         }
 
         #endregion

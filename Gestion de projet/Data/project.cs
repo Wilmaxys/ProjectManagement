@@ -12,9 +12,9 @@ namespace Gestion_de_projet.Data
         #region Fields
 
         private int Identifier;
-        private string Nom;
-        private DateTime DateDeb;
-        private DateTime DateFin;
+        private string Name;
+        private DateTime DateStart;
+        private DateTime DateEnd;
         private string Description;
 
         #endregion
@@ -27,19 +27,19 @@ namespace Gestion_de_projet.Data
         public int identifier { get => Identifier; set => Identifier = value; }
 
         /// <summary>
-        /// Obtient ou définit le nom
+        /// Obtient ou définit le name
         /// </summary>
-        public string nom { get => Nom; set => Nom = value; }
+        public string name { get => Name; set => Name = value; }
 
         /// <summary>
         /// Obtient ou définit la data de début
         /// </summary>
-        public DateTime dateDeb { get => DateDeb; set => DateDeb = value; }
+        public DateTime dateDeb { get => DateStart; set => DateStart = value; }
 
         /// <summary>
         /// Obtient ou définit la date de fin
         /// </summary>
-        public DateTime dateFin { get => DateFin; set => DateFin = value; }
+        public DateTime dateFin { get => DateEnd; set => DateEnd = value; }
 
         /// <summary>
         /// Obtient ou définit la valeur de la description
@@ -56,7 +56,7 @@ namespace Gestion_de_projet.Data
         /// </summary>
         public override string ToString()
         {
-            return  nom + "," + identifier + "," + description + "," + dateDeb.ToString("dd/MM/yyyy") + "," + dateFin.ToString("dd/MM/yyyy");
+            return  name + "," + identifier + "," + description + "," + dateDeb.ToString("dd/MM/yyyy") + "," + dateFin.ToString("dd/MM/yyyy");
         }
 
         #endregion

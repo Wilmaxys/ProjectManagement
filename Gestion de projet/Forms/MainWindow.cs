@@ -54,6 +54,7 @@ namespace Gestion_de_projet.Forms
         #endregion
 
         #region Methods
+
         
         /// <summary>
         /// Définit les datasources des listBoxs
@@ -66,7 +67,7 @@ namespace Gestion_de_projet.Forms
             DTG_Project.DataSource = _ProjectManagement.ListProject;
 
             DTG_Project.Columns[0].HeaderText = "Id";
-            DTG_Project.Columns[1].HeaderText = "Nom";
+            DTG_Project.Columns[1].HeaderText = "Name";
             DTG_Project.Columns[2].HeaderText = "Date de début";
             DTG_Project.Columns[3].HeaderText = "Date de fin";
             DTG_Project.Columns[4].HeaderText = "Description";
@@ -177,7 +178,7 @@ namespace Gestion_de_projet.Forms
                 editProject.StartPosition = FormStartPosition.CenterParent;
                 if (editProject.ShowDialog() == DialogResult.OK)
                 {
-                    if (!String.IsNullOrWhiteSpace(addProject.nom))
+                    if (!String.IsNullOrWhiteSpace(addProject.name))
                     {
                         _ProjectManagement.ListProject.Add(addProject);
                         hasChanges = true;
@@ -226,6 +227,11 @@ namespace Gestion_de_projet.Forms
         }
 
 
+        /// <summary>
+        /// Formate la DataGridView Liste tâche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DTG_ListTask_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 6  || e.ColumnIndex == 8) // Check for the column you want
@@ -305,8 +311,6 @@ namespace Gestion_de_projet.Forms
             }
         }
         
-           
-
 
         #region getNewIdentifers
 
@@ -353,17 +357,33 @@ namespace Gestion_de_projet.Forms
         #endregion
 
         
+        /// <summary>
+        /// Appel la fonction de sauvegarde à l'appuie du bouton sauvegarder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TSM_Save_Click(object sender, EventArgs e)
         {
             hasChanges = false;
             Save();
         }
 
+
+
+        /// <summary>
+        /// Sauvegarde le projet en appellant la méthode du projectManagement
+        /// </summary>
         private void Save()
         {
             _ProjectManagement.Save(".\\Data.dat");
         }
 
+
+
+        /// <summary>
+        /// Vérifie si il y a des modifications et propose une sauvegarde
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnClosing(CancelEventArgs e)
         {
             if (hasChanges)
@@ -384,6 +404,12 @@ namespace Gestion_de_projet.Forms
             base.OnClosing(e);
         }
 
+
+        /// <summary>
+        /// Formate la DataGridView Liste type de tâche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DTG_ListeTaskType_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex % 2 == 0)
@@ -392,6 +418,12 @@ namespace Gestion_de_projet.Forms
             }
         }
 
+
+        /// <summary>
+        /// Formate la DataGridView Liste Projet
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DTG_Project_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex % 2 == 0)
